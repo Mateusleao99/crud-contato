@@ -1,0 +1,107 @@
+/*RESETANDO A PAGINA*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    font-family: Arial , Helvetica, sans-serif;
+
+}
+header{
+    padding: 9px 0;
+    text-align: center;
+    background:#EC7000;
+}
+/*FIM RESET */
+
+/*MENU*/
+.navegacao{
+    text-align: left;
+}
+.navegacao img{
+    width: 50px;
+}
+
+.imgMenu{
+    padding-left: 10px;
+}
+.menu {
+    margin: 0;
+    padding-left: 20%;
+
+	font-size: 1.4rem;
+
+    list-style: none;
+    display: inline-block;
+}
+.menu li{
+    display: inline-block;
+}
+.itemMenu a{
+    color: #ffffff;  
+}
+a:hover {
+    text-decoration: none;
+}
+.itemMenu a:hover{
+    color: rgb(133, 88, 49);
+    text-decoration: none;
+}
+.itemMenu {
+    padding-left: 10px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 70%;
+}
+/*FIM MENU*/
+/*Modal*/
+.modal-header{
+    background:#EC7000;
+}
+
+/*FIM MODAL */
+
+/*TABELA CONTATO*/
+.tabelaContato{
+    text-align: center;
+}
+.tituloTabela{
+    text-align: center;
+    margin-top: 5%;
+    padding: 3%;
+}
+.table{
+    margin-left: 25%;
+    width: auto;
+}
+
+/*FIM TABELA CONTATO*/
+
+
+/*CADASTRO CONTATO*/
+.tituloCadastro{
+    padding: 3%;
+    text-align: center;
+
+}
+.formCadastro{
+    padding:0 10% 10% 10%;
+    
+}
+.botaoContato{
+    padding-top: 4%;
+    text-align: center;    
+}
+
+
+/*FIM CADASTRO CONTATO*/
+
+/*RODAPE*/
+.rodape {
+	padding: 40px 0;
+
+	background-color: #484848;
+
+	color: #fff;
+	text-align: center;
+}
+/*FIM DO RODAPE*/

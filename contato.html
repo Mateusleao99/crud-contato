@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <title>Banco Itaú | Tudo para você</title>
+        <link rel="shortcut icon" href="img/logo-itau.ico">
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    </head>
+    <header>
+        <div>
+            <nav class="navegacao">
+                <img class="imgMenu" src="img/logo.png">
+                <ul class="menu">
+                    <li class="itemMenu">
+                        <a href="#" >Serviços</a>
+                    </li>
+                    <li class="itemMenu">
+                        <a href="#">Ajuda</a>
+                    </li>
+
+                    <li class="itemMenu">
+                        <a href="#">Transferencia</a>
+                    </li>
+                    <li class="itemMenu">
+                        <a href="#">Pagamento</a>
+                    </li>
+                    <li class="itemMenu">
+                        <a href="#">Cartão</a>
+                    </li>
+                    <li class="itemMenu">
+                        <a href="contato.html">Adicionar Conta</a>
+                    </li>
+                </ul>     
+            </nav>    
+        </div>
+    </header>
+    <body>
+        <div class="tituloCadastro">
+            <h4>Registre novo contato</h4>
+            <h6>Campos obrigatorio (*)</h6>
+        </div>
+        <form class="formCadastro" id="formCadastro" method="post">
+            <div class="form-row">
+                <div class="form-group col-md-5">
+                <label>Nome *</label>
+                <input type="name" name="nome" id="nome" class="form-control" placeholder="Nome completo">
+                </div>
+                <div class="form-group col-md-5">
+                <label>CPF *</label>
+                <input type="number" name="cpf" id="cpf" class="form-control" placeholder="xxx.xxx.xxx-xx">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-3">
+                    <label>Código do banco *</label>
+                    <input type="number"  name="codBanco" id="numBanco" class="form-control" placeholder="xxxxx">
+                </div>
+                <div class="form-group col-md-3">
+                    <label>Agência *</label>
+                    <input type="number" name="agencia" id="agencia" class="form-control" placeholder="xxxxx">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="inputAddress2">Conta *</label>
+                    <input type="number" name="conta" id="conta"class="form-control" placeholder="xxxx">
+                </div>
+            </div>
+            <div class="botaoContato">
+                <button type="submit" class="btn btn-outline-success">Enviar</button>
+                <a href="index.html" class="btn btn-outline-danger">Cancelar</a>
+            </div>
+        </form>
+        <footer class="rodape">
+            <div>
+                <p>Itaú</p>
+            </div>
+            <div>
+                <p>&copy; 2019 Itaú Unibanco Holding S.A. CNPJ: 60.872.504/0001-23</p>
+            </div>
+        </footer>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/jquery.validate.min.js"></script>
+        <script src="js/localization/messages_pt_BR.min.js"></script>
+
+        <!--Validação formulario-->
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $ ("#formCadastro").validate({
+                    rules:{
+                        nome: {
+                            required:true,
+                            maxlength:100,
+                            minlength:10,
+                        } , 
+                        cpf: {
+                            required:true,
+                            maxlength:11,
+                            minlength:11,
+                        },
+                        codBanco: {
+                            required:true,
+                            maxlength:3,
+                            minlength:3,
+                        },
+                        agencia: {
+                            required:true,
+                            maxlength:7,
+                            minlength:7,
+                        },
+                        conta: {
+                            required:true,
+                            maxlength:9,
+                            minlength:9,
+                        }
+
+                    }
+
+                } )
+            } )
+        </script>
+    </body>
+</html>

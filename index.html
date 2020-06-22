@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <title>Banco Itaú | Tudo para você</title>
+        <link rel="shortcut icon" href="img/logo-itau.ico">
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+    <header>
+        <div class="cabecalho"></div>
+    </header>
+    <body>
+        <div>
+            <div class="tituloTabela">
+                <h4>Contatos Salvos</h4>
+            </div>
+            <table class="table table-hover tabelaContato">
+                <thead>
+                    <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">CPF</th>
+                    <th scope="col">Agência</th>
+                    <th scope="col">Conta</th>
+                    <th scope="col"><a href="contato.html">Adicionar Conta</a></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                    <th scope="row">1</th>
+                    <td>Mateus</td>
+                    <td>xxx.xxx.xxx-xx</td>
+                    <td>xxxx</td>
+                    <td>xxxxx</td>
+                    <td>
+                        <button type="button" class="btn btn-outline-info" data-toggle="modal" data-target="#modalEditar" >Editar</button>
+                        <button type="button" class="btn btn-outline-danger" data-toggle="modal" data-target="#modalExcluir">Excluir</button>
+                    </td>
+                    </tr>
+                    <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>xxx.xxx.xxx-xx</td>
+                    <td>xxxx</td>
+                    <td>xxxxx</td>
+                    <td>
+                        <button type="button" class="btn btn-outline-info" data-toggle="modal" data-target="#modalEditar" >Editar</button>
+                        <button type="button" class="btn btn-outline-danger" data-toggle="modal" data-target="#modalExcluir">Excluir</button>
+                    </td>
+                    </tr>
+                    <tr>
+                    <th scope="row">3</th>
+                    <td>Larry</td>
+                    <td>xxx.xxx.xxx-xx</td>
+                    <td>xxxx</td>
+                    <td>xxxxx</td>
+                    <td>
+                        <button type="button" class="btn btn-outline-info" data-toggle="modal" data-target="#modalEditar" >Editar</button>
+                        <button type="button" class="btn btn-outline-danger" data-toggle="modal" data-target="#modalExcluir">Excluir</button>
+                    </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+      <!-- Modal Excluir-->
+        <div class="modal fade" id="modalExcluir" tabindex="-1" role="dialog" aria-labelledby="modalExcluir" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalExcluir">Banco Itaú</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Tem certeza que deseja excluir ?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-secondary" data-dismiss="modal"> Não </button>
+                        <button type="submit" class="btn btn-outline-secondary"> Sim </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Fim Modal Excluir-->
+
+        <!-- Modal Editar-->
+        <div class="modal fade" id="modalEditar" tabindex="-1" role="dialog" aria-labelledby="modalEditar" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalEditar">Banco Itaú - Editar</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="formCadastro" id="formCadastro" method="post">
+                            <div class="form-row">
+                                <div class="form-group col-md-5">
+                                    <label>Nome *</label>
+                                    <input type="name" class="form-control" placeholder="Nome completo">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label>CPF *</label>
+                                    <input type="number" class="form-control" placeholder="xxx.xxx.xxx-xx">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-3">
+                                    <label for="inputAddress2">Conta *</label>
+                                    <input type="number" class="form-control" placeholder="xxxx">
+                                </div>
+                                <div class="form-group col-md-3">
+                                    <label>Agência *</label>
+                                    <input type="number" class="form-control" placeholder="xxxxx">
+                                </div>
+                                <div class="form-group col-md-5">
+                                    <label>Código do banco *</label>
+                                    <input type="number" class="form-control" placeholder="xxxxx">
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-outline-secondary" data-dismiss="modal"> Cancelar </button>
+                                <button type="submit" class="btn btn-outline-secondary"> Salvar </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Fim Modal Editar-->     
+        <script src="js/jquery.min.js"></script>
+        <script src="js/jquery.validate.min.js"></script>
+        <script src="js/localization/messages_pt_BR.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="js/bootstrap.min.js"></script>
+
+        <!--Validação formulario-->
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $ ("#formCadastro").validate({
+                    rules:{
+                        nome: {
+                            required:true,
+                            maxlength:100,
+                            minlength:10,
+                        } , 
+                        cpf: {
+                            required:true,
+                            maxlength:11,
+                            minlength:11,
+                        },
+                        codBanco: {
+                            required:true,
+                            maxlength:3,
+                            minlength:3,
+                        },
+                        agencia: {
+                            required:true,
+                            maxlength:7,
+                            minlength:7,
+                        },
+                        conta: {
+                            required:true,
+                            maxlength:9,
+                            minlength:9,
+                        }
+
+                    }
+
+                } )
+            } )
+        </script>
+
+        <!--Importação cabeçalho-->
+        <script>
+            $(document).ready(function(){
+                $(function(){
+                    $("#cabecalho").load("menuNav.html"); 
+                });
+            });
+        </script>
+    </body>
+</html>
